@@ -96,7 +96,7 @@ export function AppLayout({ children }: AppLayoutProps) {
             <div className="md:hidden flex items-center gap-2">
               <img
                 src="/logo.png"
-                alt="Praskla Logo"
+                alt="Project Management Logo"
                 className="w-9 h-9 object-contain flex-shrink-0"
               />
               <span className="text-sm font-bold leading-tight text-foreground">PY Manage</span>

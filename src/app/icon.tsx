@@ -24,14 +24,13 @@ export default function Icon() {
     (
       <div
         style={{
-          background: '#ffffff',
           width: '100%',
           height: '100%',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: '4px',
-          padding: '2px',
+          borderRadius: '6px',
+          overflow: 'hidden',
         }}
       >
         {logoBase64 ? (
@@ -39,14 +38,13 @@ export default function Icon() {
             src={logoBase64}
             alt="Logo"
             style={{
-              width: '26px',
-              height: '26px',
-              objectFit: 'contain',
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
             }}
           />
         ) : (
-          // fallback placeholder just in case
-          <div style={{ width: '20px', height: '20px', background: '#58326A', borderRadius: '2px' }} />
+          <div style={{ width: '100%', height: '100%', background: '#58326A', borderRadius: '4px' }} />
         )}
       </div>
     ),

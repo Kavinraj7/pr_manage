@@ -96,9 +96,17 @@ export default function UsersPage() {
       });
     } catch (error: any) {
       console.error('Failed to create user', error);
+      let desc = error?.message || 'An unexpected error occurred.';
+      if (error?.code === 'auth/email-already-in-use' || desc.includes('email-already-in-use')) {
+        desc = 'A user with this email address already exists.';
+      } else if (error?.code === 'auth/invalid-email' || desc.includes('invalid-email')) {
+        desc = 'Please enter a valid email address format.';
+      } else if (error?.code === 'auth/weak-password' || desc.includes('weak-password')) {
+        desc = 'Password should be at least 6 characters long.';
+      }
       toast({
         title: 'Error creating user',
-        description: error.message || 'An unexpected error occurred.',
+        description: desc,
         variant: 'destructive',
       });
     } finally {
@@ -168,7 +176,7 @@ export default function UsersPage() {
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="e.g. rahul@company.com"
+                    placeholder="e.g. rahul@example.com"
                     required
                   />
                 </div>

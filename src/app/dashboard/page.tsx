@@ -119,7 +119,7 @@ export default function PMDashboard() {
             <div className="rounded-lg border border-dashed p-8 text-center bg-card">
               <FolderKanban className="mx-auto h-10 w-10 text-muted-foreground mb-3" />
               <h3 className="font-semibold text-lg">No Projects Created Yet</h3>
-              <p className="text-sm text-muted-foreground mb-4">Get started by creating your first company project.</p>
+              <p className="text-sm text-muted-foreground mb-4">Get started by creating your first project.</p>
               <Button onClick={() => router.push('/projects/create')}>Create Project</Button>
             </div>
           ) : (

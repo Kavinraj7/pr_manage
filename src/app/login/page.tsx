@@ -107,7 +107,7 @@ export default function LoginPage() {
 
         {/* Footer text */}
         <p className="relative z-10 text-purple-300/60 text-xs text-center w-full">
-          © {new Date().getFullYear()} PY Manage. Internal use only.
+          © {new Date().getFullYear()} PY Manage. All rights reserved.
         </p>
       </div>
 
@@ -132,7 +132,7 @@ export default function LoginPage() {
               <Input
                 id="email"
                 type="email"
-                placeholder="you@company.com"
+                placeholder="you@example.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required

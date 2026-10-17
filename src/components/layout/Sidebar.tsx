@@ -75,7 +75,7 @@ export function Sidebar() {
       <div className="flex items-center gap-4 px-1 mb-4 border-b border-muted/50 pb-4 min-w-0">
         <img
           src="/logo.png"
-          alt="Praskla Logo"
+          alt="Project Management Logo"
           className="w-12 h-12 object-contain flex-shrink-0"
         />
         <div className="-ml-2.5 flex flex-col justify-center min-w-0 pr-1">
